@@ -1,0 +1,20 @@
+<!-- news/templates/news/news_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>News Articles</h1>
+        <ul>
+            {% for article in articles %}
+            <li>{{ article.title }} - {{ article.published_date }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
