@@ -1,15 +1,124 @@
-<!-- home/templates/home/index.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LASU News Home</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Custom styles for LASU News homepage */
+    body {
+        background-color: #000000; /* Black background */
+        color: #ffffff; /* White text color */
+    }
+
+    .cover-container {
+        max-width: 42em;
+        margin: auto;
+        text-align: center;
+    }
+
+    .cover-heading {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.1;
+        color: inherit;
+        margin-bottom: 1rem;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        border-color: #fff;
+    }
+
+    .btn-lg:hover,
+    .btn-lg:focus {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .btn-lg:active {
+        background-color: #5a23c8;
+        border-color: #5a23c8;
+    }
+
+    .masthead {
+        position: relative;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .masthead .nav-link {
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        background-color: transparent; /* Initial transparent background */
+        transition: background-color 0.3s ease; /* Smooth transition */
+    }
+
+    .masthead .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Light grey hover color */
+    }
+
+    .masthead .nav-link.active {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+</style>
+{% endblock %}
+
+{% block nav %}
+<header class="masthead mb-auto">
     <div class="container">
-        <h1>Welcome to LASU News</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="{% url 'Home:home' %}">LASU News</a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="color: white;"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'Home:home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'Student:login' %}">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'Student:register' %}">Join</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-</body>
-</html>
+</header>
+{% endblock %}
+
+
+{% block content %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <main class="px-3 text-center">
+        <div class="px-4">
+            <h1 class="cover-heading">LASU News</h1>
+            <p class="lead">Stay updated with the latest news and events from Lagos State University.</p>
+            <p class="lead">
+                <a href="{% url 'Student:register' %}" class="btn btn-lg fw-bold border-white">Join Now</a>
+            </p>
+        </div>
+    </main>
+
+    
+</div>
+{% endblock %}

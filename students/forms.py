@@ -1,27 +1,21 @@
+# forms.py
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
-from .models import *
+from .models import Student
 
-class StudentRegistrationForm(UserCreationForm):
-    matric_number = forms.CharField(max_length=11, required=True)
+class StudentRegistrationForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+    password_confirm = forms.CharField(widget=forms.PasswordInput, label="Confirm Password")
 
     class Meta:
         model = Student
-        fields = ('username', 'matric_number', 'password1', 'password2')
+        fields = ['matric_number', 'full_name', 'faculty', 'department', 'phone_number', 'email', 'gender']
 
-    def clean_matric_number(self):
-        matric_number = self.cleaned_data.get('matric_number')
-        student = Student.objects.filter(matric_number=matric_number).first()
-        if not student:
-            raise forms.ValidationError("Invalid matric number.")
-        return matric_number
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data.get("password")
+        password_confirm = cleaned_data.get("password_confirm")
 
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        matric_number = self.cleaned_data.get('matric_number')
-        student = Student.objects.get(matric_number=matric_number)
-        user.matric_number = matric_number
-        user.email = student.email
-        if commit:
-            user.save()
-        return user
+        if password and password_confirm and password != password_confirm:
+            raise forms.ValidationError("Passwords do not match")
+
+        return cleaned_data
