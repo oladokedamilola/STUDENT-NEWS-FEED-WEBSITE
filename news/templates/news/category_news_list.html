@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ category.name }} News{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ category.name }} News</h2>
+    {% for news_item in news_items %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ news_item.title }}</h5>
+                <p class="card-text">{{ news_item.content|truncatewords:20 }}</p>
+                <a href="{% url 'news:news_detail' news_item.pk %}" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

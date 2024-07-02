@@ -93,10 +93,10 @@ Home
                             <a class="nav-link active" aria-current="page" href="{% url 'Home:home' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'Student:login' %}">Sign in</a>
+                            <a class="nav-link" href="{% url 'student:login' %}">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'Student:register' %}">Join</a>
+                            <a class="nav-link" href="{% url 'student:verify_matric_number' %}">Join</a>
                         </li>
                     </ul>
                 </div>
@@ -114,7 +114,7 @@ Home
             <h1 class="cover-heading">LASU News</h1>
             <p class="lead">Stay updated with the latest news and events from Lagos State University.</p>
             <p class="lead">
-                <a href="{% url 'Student:register' %}" class="btn btn-lg fw-bold border-white">Join Now</a>
+                <a href="{% url 'student:verify_matric_number' %}" class="btn btn-lg fw-bold border-white">Join Now</a>
             </p>
         </div>
     </main>

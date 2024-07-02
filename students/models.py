@@ -1,6 +1,21 @@
-
 from django.db import models
 from django.core.exceptions import ValidationError
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+class PreRegisteredStudent(models.Model):
+    matric_number = models.CharField(max_length=20, unique=True)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    gender = models.CharField(max_length=10)
+    faculty = models.CharField(max_length=100)
+    department = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.matric_number} - {self.first_name} {self.last_name}"
+
 
 class Student(models.Model):
     FACULTY_CHOICES = [
@@ -35,9 +50,14 @@ class Student(models.Model):
             'Law': '2007',
         }
         prefix = faculty_matric_prefix.get(self.faculty)
-        if not self.matric_number.startswith(prefix):
-            raise ValidationError(f"Matric number must start with {prefix} for {self.faculty} faculty.")
         
+        if prefix is None:
+            logger.error(f"Faculty {self.faculty} is not valid.")
+            raise ValidationError(f"Faculty {self.faculty} is not valid.")
+        
+        if not self.matric_number.startswith(prefix):
+            logger.error(f"Matric number {self.matric_number} does not start with {prefix} for {self.faculty} faculty.")
+            raise ValidationError(f"Matric number must start with {prefix} for {self.faculty} faculty.")
  
 
  

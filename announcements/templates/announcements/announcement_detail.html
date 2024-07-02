@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ announcement.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ announcement.title }}</h2>
+    <p>{{ announcement.content }}</p>
+    <p><strong>Published on:</strong> {{ announcement.published_date }}</p>
+</div>
+{% endblock %}

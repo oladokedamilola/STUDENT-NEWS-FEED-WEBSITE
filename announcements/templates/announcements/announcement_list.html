@@ -32,15 +32,19 @@ Announcements
 
 
 
-{% block content %}
-<div class="container">
-    <h1>Announcements</h1>
-    <ul>
+    {% block content %}
+    <div class="container mt-5">
+        <h2>All Announcements</h2>
         {% for announcement in announcements %}
-        <li>{{ announcement.title }} - {{ announcement.created_date }}</li>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ announcement.title }}</h5>
+                    <p class="card-text">{{ announcement.content|truncatewords:20 }}</p>
+                    <a href="{% url 'announcements:announcement_detail' announcement.pk %}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
-</div>
-{% endblock %}
+    </div>
+    {% endblock %}
 
 </html>

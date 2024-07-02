@@ -23,11 +23,12 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('news/', include('news.urls')),
-    path('events/', include('events.urls')),
-    path('announcements/', include('announcements.urls')),
+    path('news/', include('news.urls', namespace='news')),
+    path('announcements/', include('announcements.urls', namespace='announcements')),
+    path('events/', include('events.urls', namespace='events')),
+    path('search/', include('search.urls', namespace='search')),
     path('students/', include('students.urls')),
-    path('search/', include('search.urls')),
+    path('special_users/', include('special_users.urls')),  
 ]
 
 if settings.DEBUG:

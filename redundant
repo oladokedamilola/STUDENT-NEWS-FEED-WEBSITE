@@ -1,0 +1,92 @@
+[
+    {
+        "matric_number": "20010000001",
+        "full_name": "John Doe",
+        "faculty": "Management Science",
+        "department": "Business Administration",
+        "phone_number": "08012345678",
+        "email": "john.doe@lasu.edu.ng",
+        "gender": "Male"
+    },
+    {
+        "matric_number": "20020000001",
+        "full_name": "Jane Smith",
+        "faculty": "Agriculture",
+        "department": "Animal Science",
+        "phone_number": "08023456789",
+        "email": "jane.smith@lasu.edu.ng",
+        "gender": "Female"
+    },
+    {
+        "matric_number": "20030000001",
+        "full_name": "Michael Johnson",
+        "faculty": "Social Science",
+        "department": "Sociology",
+        "phone_number": "08034567890",
+        "email": "michael.johnson@lasu.edu.ng",
+        "gender": "Male"
+    },
+    {
+        "matric_number": "20040000001",
+        "full_name": "Emily Davis",
+        "faculty": "Education",
+        "department": "Curriculum Studies",
+        "phone_number": "08045678901",
+        "email": "emily.davis@lasu.edu.ng",
+        "gender": "Female"
+    },
+    {
+        "matric_number": "20050000001",
+        "full_name": "David Brown",
+        "faculty": "Science",
+        "department": "Computer Science",
+        "phone_number": "08056789012",
+        "email": "david.brown@lasu.edu.ng",
+        "gender": "Male"
+    },
+    {
+        "matric_number": "20060000001",
+        "full_name": "Sophia Wilson",
+        "faculty": "Arts",
+        "department": "History",
+        "phone_number": "08067890123",
+        "email": "sophia.wilson@lasu.edu.ng",
+        "gender": "Female"
+    },
+    {
+        "matric_number": "20070000001",
+        "full_name": "Daniel Martinez",
+        "faculty": "Law",
+        "department": "Civil Law",
+        "phone_number": "08078901234",
+        "email": "daniel.martinez@lasu.edu.ng",
+        "gender": "Male"
+    },
+    {
+        "matric_number": "20010000002",
+        "full_name": "Laura Moore",
+        "faculty": "Management Science",
+        "department": "Accounting",
+        "phone_number": "08089012345",
+        "email": "laura.moore@lasu.edu.ng",
+        "gender": "Female"
+    },
+    {
+        "matric_number": "20020000002",
+        "full_name": "James Anderson",
+        "faculty": "Agriculture",
+        "department": "Crop Science",
+        "phone_number": "08090123456",
+        "email": "james.anderson@lasu.edu.ng",
+        "gender": "Male"
+    },
+    {
+        "matric_number": "20030000002",
+        "full_name": "Ava Taylor",
+        "faculty": "Social Science",
+        "department": "Political Science",
+        "phone_number": "08001234567",
+        "email": "ava.taylor@lasu.edu.ng",
+        "gender": "Female"
+    }
+]

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Search Results for "{{ query }}"</h2>
+    <h3>News</h3>
+    {% for news in news_results %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ news.title }}</h5>
+                <p class="card-text">{{ news.content|truncatewords:20 }}</p>
+                <a href="{% url 'news:news_detail' news.pk %}" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    {% endfor %}
+    
+    <h3>Announcements</h3>
+    {% for announcement in announcement_results %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ announcement.title }}</h5>
+                <p class="card-text">{{ announcement.content|truncatewords:20 }}</p>
+                <a href="{% url 'announcements:announcement_detail' announcement.pk %}" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    {% endfor %}
+
+    <h3>Events</h3>
+    {% for event in event_results %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ event.title }}</h5>
+                <p class="card-text">{{ event.description|truncatewords:20 }}</p>
+                <a href="{% url 'events:event_detail' event.pk %}" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -32,15 +32,33 @@ News
 
 
 
-{% block content %}
-<div class="container">
-    <h1>News Articles</h1>
-    <ul>
-        {% for article in articles %}
-        <li>{{ article.title }} - {{ article.published_date }}</li>
-        {% endfor %}
-    </ul>
-</div>
-{% endblock %}
+    {% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Categories</h4>
+                <ul class="list-group">
+                    {% for category in categories %}
+                        <li class="list-group-item">
+                            <a href="{% url 'news:category_news_list' category.id %}">{{ category.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <h2>All News</h2>
+                {% for news_item in news_items %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ news_item.title }}</h5>
+                            <p class="card-text">{{ news_item.content|truncatewords:20 }}</p>
+                            <a href="{% url 'news:news_detail' news_item.pk %}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endblock %}
 
 </html>

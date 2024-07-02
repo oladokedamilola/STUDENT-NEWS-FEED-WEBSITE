@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load widget_tweaks %}
+{% load custom_filters %}
 
 
 
@@ -20,10 +21,10 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'News:news_list' %}">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'Event:event' %}">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'Announcements:announcements' %}">Announcements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Student:profile' %}">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Student:logout' %}">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'student:profile' %}">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'student:logout' %}">Logout</a></li>
                 {% else %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Student:login' %}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'student:login' %}">Login</a></li>
                  
                 {% endif %}
             </ul>
@@ -32,117 +33,60 @@
     {% endblock %}
 
 
-
 {% block content %}
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h2 class="card-title">Register</h2>
+                    <h2>Register</h2>
                 </div>
                 <div class="card-body">
                     <form method="post">
                         {% csrf_token %}
-                        
                         <div class="form-group">
-                            {{ form.matric_number.label_tag }}
-                            {{ form.matric_number|add_class:"form-control" }}
-                            {% if form.matric_number.errors %}
-                                <div class="text-danger">
-                                    {{ form.matric_number.errors }}
-                                </div>
-                            {% endif %}
+                            <label>Matric Number</label>
+                            <input type="text" class="form-control" value="{{ student_data.matric_number }}" disabled>
                         </div>
-                    
                         <div class="form-group">
-                            {{ form.full_name.label_tag }}
-                            {{ form.full_name|add_class:"form-control" }}
-                            {% if form.full_name.errors %}
-                                <div class="text-danger">
-                                    {{ form.full_name.errors }}
-                                </div>
-                            {% endif %}
+                            <label>First Name</label>
+                            <input type="text" class="form-control" value="{{ student_data.first_name }}" disabled>
                         </div>
-                    
                         <div class="form-group">
-                            {{ form.faculty.label_tag }}
-                            {{ form.faculty|add_class:"form-control" }}
-                            {% if form.faculty.errors %}
-                                <div class="text-danger">
-                                    {{ form.faculty.errors }}
-                                </div>
-                            {% endif %}
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" value="{{ student_data.last_name }}" disabled>
                         </div>
-                    
                         <div class="form-group">
-                            {{ form.department.label_tag }}
-                            {{ form.department|add_class:"form-control" }}
-                            {% if form.department.errors %}
-                                <div class="text-danger">
-                                    {{ form.department.errors }}
-                                </div>
-                            {% endif %}
+                            <label>Faculty</label>
+                            <input type="text" class="form-control" value="{{ student_data.faculty }}" disabled>
                         </div>
-                    
                         <div class="form-group">
-                            {{ form.phone_number.label_tag }}
-                            {{ form.phone_number|add_class:"form-control" }}
-                            {% if form.phone_number.errors %}
-                                <div class="text-danger">
-                                    {{ form.phone_number.errors }}
-                                </div>
-                            {% endif %}
+                            <label>Department</label>
+                            <input type="text" class="form-control" value="{{ student_data.department }}" disabled>
                         </div>
-                    
                         <div class="form-group">
-                            {{ form.email.label_tag }}
-                            {{ form.email|add_class:"form-control" }}
-                            {% if form.email.errors %}
-                                <div class="text-danger">
-                                    {{ form.email.errors }}
-                                </div>
-                            {% endif %}
+                            <label>Gender</label>
+                            <input type="text" class="form-control" value="{{ student_data.gender }}" disabled>
                         </div>
-                    
                         <div class="form-group">
-                            {{ form.gender.label_tag }}
-                            {{ form.gender|add_class:"form-control" }}
-                            {% if form.gender.errors %}
-                                <div class="text-danger">
-                                    {{ form.gender.errors }}
-                                </div>
-                            {% endif %}
+                            {{ form.username.label_tag }}
+                            {{ form.username|add_class:"form-control" }}
                         </div>
-                    
                         <div class="form-group">
                             {{ form.password.label_tag }}
                             {{ form.password|add_class:"form-control" }}
-                            {% if form.password.errors %}
-                                <div class="text-danger">
-                                    {{ form.password.errors }}
-                                </div>
-                            {% endif %}
                         </div>
-                    
                         <div class="form-group">
                             {{ form.password_confirm.label_tag }}
                             {{ form.password_confirm|add_class:"form-control" }}
-                            {% if form.password_confirm.errors %}
-                                <div class="text-danger">
-                                    {{ form.password_confirm.errors }}
-                                </div>
-                            {% endif %}
                         </div>
-                    
+                        
                         <button type="submit" class="btn btn-primary btn-block">Register</button>
                     </form>
-                    
-                    <p class="mt-3 text-center text-muted">Already registered? <a href="{% url 'Student:login' %}">Sign in</a></p>
-                    
                 </div>
             </div>
         </div>
     </div>
 </div>
 {% endblock %}
+

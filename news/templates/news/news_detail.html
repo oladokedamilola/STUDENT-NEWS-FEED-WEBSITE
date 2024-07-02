@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ news_item.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>{{ news_item.title }}</h2>
+    <p>{{ news_item.content }}</p>
+    <p><strong>Category:</strong> {{ news_item.category.name }}</p>
+    <p><strong>Published on:</strong> {{ news_item.published_date }}</p>
+</div>
+{% endblock %}
