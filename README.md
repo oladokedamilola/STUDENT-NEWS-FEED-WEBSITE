@@ -77,8 +77,9 @@ cd STUDENT-NEWS-FEED-WEBSITE
 
 Here are some screenshots of the Student News Feed Website:
 
-### 1. **Homepage**
-![Homepage](screenshots/homepage.png)
+### 1. **Homepage/Landing page**
+![Homepage]([screenshots/homepage.png](https://github.com/oladokedamilola/STUDENT-NEWS-FEED-WEBSITE/blob/main/screenshots/sec1.png?raw=true))
+![Homepage]([screenshots/homepage.png](https://github.com/oladokedamilola/STUDENT-NEWS-FEED-WEBSITE/blob/main/screenshots/sec2.png?raw=true))
 
 ### 2. **Matriculation Number Verification**
 ![Verification](screenshots/verification.png)
