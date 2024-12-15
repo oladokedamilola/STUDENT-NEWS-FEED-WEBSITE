@@ -73,29 +73,6 @@ cd STUDENT-NEWS-FEED-WEBSITE
 
 ---
 
-## Screenshots
-
-Here are some screenshots of the Student News Feed Website:
-
-### 1. **Homepage/Landing page**
-![Homepage]([screenshots/homepage.png](https://github.com/oladokedamilola/STUDENT-NEWS-FEED-WEBSITE/blob/main/screenshots/sec1.png?raw=true))
-![Homepage]([screenshots/homepage.png](https://github.com/oladokedamilola/STUDENT-NEWS-FEED-WEBSITE/blob/main/screenshots/sec2.png?raw=true))
-
-### 2. **Matriculation Number Verification**
-![Verification](screenshots/verification.png)
-
-### 3. **Apply to be a Creator Form**
-![Creator Form](screenshots/apply_creator.png)
-
-### 4. **Create Post (For Approved Creators)**
-![Create Post](screenshots/create_post.png)
-
-### 5. **Notifications for Post Interactions**
-![Notifications](screenshots/notifications.png)
-
-
----
-
 ## How It Works
 
 1. **User Verification**: 
