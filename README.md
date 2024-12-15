@@ -33,7 +33,7 @@ A web application that serves as a dedicated platform for university students to
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: Django
-- **Database**: SQLite/MySQL/PostgreSQL (specify the DB used)
+- **Database**: SQLite (for development) and MySQL/PostgreSQL (for production)
 - **Authentication**: Custom student matriculation number verification
 
 ---
@@ -48,8 +48,8 @@ Follow these steps to set up the project on your local machine:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/student-news-feed.git
-cd student-news-feed
+git clone https://github.com/oladokedamilola/STUDENT-NEWS-FEED-WEBSITE.git
+cd STUDENT-NEWS-FEED-WEBSITE
 ```
 
 ### Set Up the Environment
@@ -92,7 +92,6 @@ Here are some screenshots of the Student News Feed Website:
 ### 5. **Notifications for Post Interactions**
 ![Notifications](screenshots/notifications.png)
 
-> Place your actual screenshots in a `screenshots` folder in the root of the repository and update the image paths.
 
 ---
 
