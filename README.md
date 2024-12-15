@@ -32,7 +32,7 @@ A web application that serves as a dedicated platform for university students to
 ## Technology Stack
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Flask/Django (or specify the framework used)
+- **Backend**: Django
 - **Database**: SQLite/MySQL/PostgreSQL (specify the DB used)
 - **Authentication**: Custom student matriculation number verification
 
