@@ -4,9 +4,77 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>{{ news_item.title }}</h2>
-    <p>{{ news_item.content }}</p>
-    <p><strong>Category:</strong> {{ news_item.category.name }}</p>
-    <p><strong>Published on:</strong> {{ news_item.published_date }}</p>
+    <div class="row mb-3">
+        <!-- Main content column -->
+        <div class="col-md-9 order-md-1 order-2 mb-5">
+            <h2>{{ news_item.title }}</h2>
+            <p>{{ news_item.content }}</p>
+            {% if news_item.image %}
+                <img src="{{ news_item.image.url }}" class="img-fluid" alt="News Image">
+            {% endif %}
+            {% if news_item.video %}
+                <video controls class="img-fluid">
+                    <source src="{{ news_item.video.url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% endif %}
+            <p><strong>Category:</strong> {{ news_item.category.name }}</p>
+            <p><strong>Published on:</strong> {{ news_item.created_at }}</p>
+
+            <!-- Like functionality -->
+            <form action="{% url 'news:like_news' news_item.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">
+                    {% if request.user in news_item.likes.all %}
+                        Unlike
+                    {% else %}
+                        Like
+                    {% endif %}
+                </button>
+                <span>{{ news_item.likes.count }} Likes</span>
+            </form>
+
+            <!-- Comments section -->
+             {% if comments %}
+             <h4>Comments</h4>
+             <ul>
+                 {% for comment in comments %}
+                     <li>{{ comment.user.username }}: {{ comment.content }}</li>
+                 {% endfor %}
+             </ul>
+             
+             {% endif %}
+           
+
+            {% if user.is_authenticated %}
+            <div class="container mt-4">
+                <h4 class="mb-3">Add a Comment</h4>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="comment-box">
+                        {{ comment_form.as_p }}
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Add Comment</button>
+                </form>                
+            </div>
+        {% else %}
+            <p><a href="{% url 'student:login' %}">Log in</a> to add a comment.</p>
+        {% endif %} 
+
+
+        </div>
+
+        <!-- Sidebar column -->
+        <div class="col-md-3 order-md-2 order-1">
+            <h4>Categories</h4>
+            <ul class="list-group">
+                {% for category in categories %}
+                    <li class="list-group-item">
+                        <a href="{% url 'news:category_news_list' category.id %}">{{ category.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}

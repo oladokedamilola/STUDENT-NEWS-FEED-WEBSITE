@@ -2,17 +2,71 @@
     {
         "first_name": "John",
         "last_name": "Doe",
-        "matric_number": "200591097",
+        "matric_number": "200590001",
         "gender": "Male",
-        "faculty": "Science",
         "department": "Computer Science"
     },
     {
         "first_name": "Jane",
         "last_name": "Smith",
-        "matric_number": "20015684",
+        "matric_number": "200690002",
         "gender": "Female",
-        "faculty": "Arts",
         "department": "History"
+    },
+    {
+        "first_name": "Michael",
+        "last_name": "Johnson",
+        "matric_number": "200190003",
+        "gender": "Male",
+        "department": "Business Administration"
+    },
+    {
+        "first_name": "Emily",
+        "last_name": "Williams",
+        "matric_number": "200290004",
+        "gender": "Female",
+        "department": "Crop Production"
+    },
+    {
+        "first_name": "Daniel",
+        "last_name": "Brown",
+        "matric_number": "200390005",
+        "gender": "Male",
+        "department": "Economics"
+    },
+    {
+        "first_name": "Olivia",
+        "last_name": "Davis",
+        "matric_number": "200490006",
+        "gender": "Female",
+        "department": "Primary Education"
+    },
+    {
+        "first_name": "James",
+        "last_name": "Wilson",
+        "matric_number": "200590007",
+        "gender": "Male",
+        "department": "Physics"
+    },
+    {
+        "first_name": "Sophia",
+        "last_name": "Miller",
+        "matric_number": "200690008",
+        "gender": "Female",
+        "department": "English Literature"
+    },
+    {
+        "first_name": "Ethan",
+        "last_name": "Moore",
+        "matric_number": "200790009",
+        "gender": "Male",
+        "department": "Law"
+    },
+    {
+        "first_name": "Ava",
+        "last_name": "Garcia",
+        "matric_number": "200890010",
+        "gender": "Female",
+        "department": "Criminology"
     }
 ]

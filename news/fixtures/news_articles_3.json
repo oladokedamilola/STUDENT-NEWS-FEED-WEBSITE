@@ -1,0 +1,285 @@
+
+[
+    {
+        "model": "news.news",
+        "pk": 1,
+        "fields": {
+            "title": "New Academic Programs Announced",
+            "content": "The university is excited to announce a range of new academic programs set to commence next semester. These programs are designed to meet the evolving needs of students and the job market. With a focus on interdisciplinary studies, students will have the opportunity to engage in courses that bridge various fields of knowledge. The introduction of these programs is part of the university's commitment to providing a comprehensive and contemporary education that prepares students for the future. Detailed syllabi and enrollment guidelines will be made available on the university website.",
+            "image": "news_images/img1.jpg",
+            "video": null,
+            "author": 1,
+            "category": 1,  
+            "created_at": "2024-07-20T10:00:00Z",
+            "updated_at": "2024-07-20T10:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 2,
+        "fields": {
+            "title": "University Sports Day Highlights",
+            "content": "The annual University Sports Day was a huge success, with students participating in various sports and games. The event kicked off with a vibrant opening ceremony, followed by competitions in athletics, soccer, basketball, and more. The spirit of sportsmanship and camaraderie was evident as students cheered for their peers. Highlights of the day included a thrilling soccer final and a record-breaking 100-meter sprint. The sports day concluded with an award ceremony recognizing the outstanding performers. The event not only showcased the athletic talents of the students but also promoted physical fitness and teamwork.",
+            "image": "news_images/img2.jpg",
+            "video": null,
+            "author": 1,
+            "category": 2,  
+            "created_at": "2024-07-20T11:00:00Z",
+            "updated_at": "2024-07-20T11:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 3,
+        "fields": {
+            "title": "Campus Concert Draws Huge Crowds",
+            "content": "The recent campus concert was a night to remember, drawing huge crowds of students and faculty. The event featured performances by popular local bands and student artists. The concert opened with an energetic performance by the university's own band, followed by a series of captivating acts that kept the audience on their feet. The highlight of the night was the performance by the headline act, which brought the house down with their electrifying music. The concert was not only a great entertainment event but also a platform for showcasing the musical talents within the university community.",
+            "image": "news_images/img1.jpg",
+            "video": null,
+            "author": 1,
+            "category": 3,  
+            "created_at": "2024-07-20T12:00:00Z",
+            "updated_at": "2024-07-20T12:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 4,
+        "fields": {
+            "title": "Upcoming Campus Activities",
+            "content": "The university has a lineup of exciting campus activities planned for the upcoming semester. These activities range from academic seminars and workshops to cultural festivals and social events. The goal is to provide students with a well-rounded university experience that goes beyond the classroom. Highlights include the annual cultural festival, a series of guest lectures by renowned experts, and a variety of club and society events. Students are encouraged to participate in these activities to enrich their university life and develop new skills and interests. Detailed schedules will be shared on the university's events page.",
+            "image": "news_images/img2.jpg",
+            "video": null,
+            "author": 1,
+            "category": 4,  
+            "created_at": "2024-07-20T13:00:00Z",
+            "updated_at": "2024-07-20T13:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 5,
+        "fields": {
+            "title": "University Administration Updates",
+            "content": "The university administration has announced several updates and changes aimed at improving campus life and academic standards. Key updates include the introduction of new policies on student conduct, enhancements to campus facilities, and initiatives to promote research and innovation. The administration is also working on expanding international collaborations and partnerships to provide students with more opportunities for global exposure. These changes are part of the university's ongoing efforts to create a supportive and dynamic learning environment. Students and faculty are encouraged to stay informed about these updates through the official university communications.",
+            "image": "news_images/img1.jpg",
+            "video": null,
+            "author": 1,
+            "category": 5,  
+            "created_at": "2024-07-20T14:00:00Z",
+            "updated_at": "2024-07-20T14:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 6,
+        "fields": {
+            "title": "New Scholarships and Financial Aid Opportunities",
+            "content": "The university is pleased to announce new scholarships and financial aid opportunities for students. These initiatives are designed to support students from diverse backgrounds and ensure that financial constraints do not hinder their education. The new scholarships cover various fields of study and are available for both undergraduate and postgraduate students. In addition, the university has introduced financial aid programs to assist students with tuition fees, accommodation, and other expenses. Interested students are encouraged to apply and take advantage of these opportunities to pursue their academic goals. Application details and deadlines will be provided on the university's financial aid office website.",
+            "image": "news_images/img2.jpg",
+            "video": null,
+            "author": 1,
+            "category": 6,  
+            "created_at": "2024-07-20T15:00:00Z",
+            "updated_at": "2024-07-20T15:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 7,
+        "fields": {
+            "title": "Student Opinions on New Campus Policies",
+            "content": "The introduction of new campus policies has sparked a range of opinions among the student body. Some students have expressed support for the changes, citing benefits such as improved campus safety and enhanced academic standards. Others have raised concerns about the impact of these policies on student freedom and activities. The university administration has welcomed the feedback and is open to discussions with student representatives to address any issues. A series of town hall meetings are scheduled to provide a platform for students to voice their opinions and suggestions. The administration is committed to working collaboratively with students to ensure that the policies meet the needs of the university community.",
+            "image": "news_images/img1.jpg",
+            "video": null,
+            "author": 1,
+            "category": 7,  
+            "created_at": "2024-07-20T16:00:00Z",
+            "updated_at": "2024-07-20T16:00:00Z"
+        }
+    },
+    {
+            "model": "news.news",
+            "pk": 8,
+            "fields": {
+                "title": "Groundbreaking Research in Renewable Energy",
+                "content": "A team of university researchers has made significant strides in renewable energy, developing a new technology that enhances the efficiency of solar panels. This breakthrough is expected to revolutionize the renewable energy sector, making solar power more accessible and affordable. The research, which has been published in a leading scientific journal, demonstrates a marked improvement in energy conversion rates. The university is proud of its researchers' achievements and is looking forward to the potential real-world applications of this technology. Further studies and collaborations with industry partners are planned to bring this innovation to market.",
+                "image": "news_images/img2.jpg",
+                "video": null,
+                "author": 1,
+                "category": 1,
+                "created_at": "2024-07-21T10:00:00Z",
+                "updated_at": "2024-07-21T10:00:00Z"
+            }
+        },
+        {
+            "model": "news.news",
+            "pk": 9,
+            "fields": {
+                "title": "Intramural Sports Season Kicks Off",
+                "content": "The intramural sports season has officially begun, with students eagerly participating in various sports leagues and tournaments. The season includes sports such as soccer, basketball, volleyball, and tennis. Intramural sports provide an excellent opportunity for students to stay active, develop their skills, and foster team spirit. The opening games saw enthusiastic participation and fierce competition, with teams representing different faculties and student organizations. The university sports department has ensured that all necessary facilities and support are in place for a successful season. Students are encouraged to join or support their favorite teams.",
+                "image": "news_images/img1.jpg",
+                "video": null,
+                "author": 1,
+                "category": 2,
+                "created_at": "2024-07-21T11:00:00Z",
+                "updated_at": "2024-07-21T11:00:00Z"
+            }
+        },
+        {
+            "model": "news.news",
+            "pk": 10,
+            "fields": {
+                "title": "Film Festival Showcases Student Talent",
+                "content": "The annual university film festival was a resounding success, showcasing a wide range of films created by student filmmakers. The festival featured short films, documentaries, and animations, highlighting the creativity and technical skills of the students. The event provided a platform for budding filmmakers to present their work to a broader audience and receive feedback from industry professionals. Awards were given for the best film, best director, and audience choice, among others. The festival not only celebrated student talent but also encouraged them to pursue their passion for filmmaking.",
+                "image": "news_images/img2.jpg",
+                "video": null,
+                "author": 1,
+                "category": 3,
+                "created_at": "2024-07-21T12:00:00Z",
+                "updated_at": "2024-07-21T12:00:00Z"
+            }
+        },
+        {
+            "model": "news.news",
+            "pk": 11,
+            "fields": {
+                "title": "Environmental Awareness Week Activities",
+                "content": "Environmental Awareness Week is in full swing, with various activities and events organized to educate and engage students on environmental issues. The week-long event includes workshops, clean-up drives, tree planting activities, and guest lectures by environmental experts. The aim is to raise awareness about sustainability, conservation, and the importance of protecting our planet. Students are actively participating in these activities, showing their commitment to making a positive impact on the environment. The university's environmental club has played a key role in organizing the events and is encouraging everyone to get involved.",
+                "image": "news_images/img1.jpg",
+                "video": null,
+                "author": 1,
+                "category": 4,
+                "created_at": "2024-07-21T13:00:00Z",
+                "updated_at": "2024-07-21T13:00:00Z"
+            }
+        },
+        {
+            "model": "news.news",
+            "pk": 12,
+            "fields": {
+                "title": "New Leadership in University Administration",
+                "content": "The university welcomes its new Vice-Chancellor, who has taken over the leadership role with a vision to further enhance the institution's academic excellence and student experience. The new Vice-Chancellor brings with him a wealth of experience in higher education administration and a strong commitment to fostering a vibrant academic community. In his inaugural address, he outlined his plans for the university, including expanding research opportunities, enhancing student support services, and strengthening industry partnerships. The university community is looking forward to the positive changes and developments under his leadership.",
+                "image": "news_images/img2.jpg",
+                "video": null,
+                "author": 1,
+                "category": 5,
+                "created_at": "2024-07-21T14:00:00Z",
+                "updated_at": "2024-07-21T14:00:00Z"
+            }
+        },
+        {
+            "model": "news.news",
+            "pk": 13,
+            "fields": {
+                "title": "Financial Aid for International Students",
+                "content": "The university has introduced new financial aid packages specifically designed for international students. These packages aim to support students from diverse backgrounds in achieving their educational goals at our institution. The financial aid includes scholarships, grants, and work-study opportunities to help cover tuition and living expenses. The university recognizes the unique challenges faced by international students and is committed to providing the necessary resources to ensure their success. Details on eligibility criteria and application processes are available on the university's international student office website.",
+                "image": "news_images/img1.jpg",
+                "video": null,
+                "author": 1,
+                "category": 6,
+                "created_at": "2024-07-21T15:00:00Z",
+                "updated_at": "2024-07-21T15:00:00Z"
+            }
+        },
+        {
+            "model": "news.news",
+            "pk": 14,
+            "fields": {
+                "title": "Students Speak Out on Campus Dining Options",
+                "content": "Recent changes to campus dining options have prompted a wave of feedback from the student body. Many students have voiced their opinions on the quality, variety, and pricing of the food available on campus. While some appreciate the healthier options introduced, others miss the more traditional and affordable choices. The university dining services are actively gathering student feedback to make necessary adjustments and improvements. A survey has been circulated to better understand student preferences, and a town hall meeting is scheduled to discuss potential changes. The administration is committed to ensuring that campus dining meets the diverse needs of the student population.",
+                "image": "news_images/img2.jpg",
+                "video": null,
+                "author": 1,
+                "category": 7,
+                "created_at": "2024-07-21T16:00:00Z",
+                "updated_at": "2024-07-21T16:00:00Z"
+            }
+        },
+    
+    {
+        "model": "news.news",
+        "pk": 15,
+        "fields": {
+            "title": "Innovative Startups Showcase at University Tech Fair",
+            "content": "The annual University Tech Fair saw an impressive display of innovative startups this year. Students from various departments showcased their projects, ranging from AI-powered healthcare solutions to eco-friendly tech gadgets. The event provided a platform for budding entrepreneurs to present their ideas to potential investors and industry experts. The highlight of the fair was a series of keynote speeches by tech leaders, who shared insights on the future of technology and entrepreneurship. The university is proud of its students' ingenuity and is committed to supporting their entrepreneurial endeavors.",
+            "image": "news_images/img1.jpg",
+            "video": null,
+            "author": 1,
+            "category": 1,
+            "created_at": "2024-07-22T10:00:00Z",
+            "updated_at": "2024-07-22T10:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 16,
+        "fields": {
+            "title": "University Team Wins National Basketball Championship",
+            "content": "In a thrilling final match, the university's basketball team clinched the national championship title. The team displayed exceptional skill and teamwork, overcoming a strong opponent in a nail-biting finish. This victory is a testament to the hard work and dedication of the players and coaching staff. The university community celebrated the win with a grand parade on campus. This achievement has brought immense pride to the university and has set a high standard for future sports competitions.",
+            "image": "news_images/img2.jpg",
+            "video": null,
+            "author": 1,
+            "category": 2,
+            "created_at": "2024-07-22T11:00:00Z",
+            "updated_at": "2024-07-22T11:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 17,
+        "fields": {
+            "title": "University Hosts International Music Festival",
+            "content": "The university recently hosted an international music festival, attracting performers and audiences from around the world. The festival featured a diverse lineup of musicians, including classical, jazz, rock, and world music artists. Over the course of three days, attendees enjoyed a variety of performances, workshops, and panel discussions. The event provided a unique cultural experience and fostered a sense of global community. The university is committed to promoting cultural exchange and artistic expression through such events.",
+            "image": "news_images/img1.jpg",
+            "video": null,
+            "author": 1,
+            "category": 3,
+            "created_at": "2024-07-22T12:00:00Z",
+            "updated_at": "2024-07-22T12:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 18,
+        "fields": {
+            "title": "Campus Sustainability Initiative Launched",
+            "content": "The university has launched a new sustainability initiative aimed at reducing its carbon footprint and promoting eco-friendly practices. The initiative includes measures such as increasing energy efficiency, reducing waste, and promoting sustainable transportation options. The university has also introduced a comprehensive recycling program and is encouraging students and staff to participate actively. This initiative is part of the university's broader commitment to environmental stewardship and sustainability. Regular updates on the progress of the initiative will be shared with the university community.",
+            "image": "news_images/img2.jpg",
+            "video": null,
+            "author": 1,
+            "category": 4,
+            "created_at": "2024-07-22T13:00:00Z",
+            "updated_at": "2024-07-22T13:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 19,
+        "fields": {
+            "title": "University Administration Announces New Strategic Plan",
+            "content": "The university administration has announced a new strategic plan aimed at enhancing the institution's academic and research excellence. The plan outlines key priorities such as increasing research funding, improving student support services, and expanding international collaborations. The administration is committed to fostering a vibrant academic environment that supports innovation and excellence. The strategic plan was developed through a collaborative process involving input from faculty, staff, and students. Implementation of the plan will begin in the upcoming academic year.",
+            "image": "news_images/img1.jpg",
+            "video": null,
+            "author": 1,
+            "category": 5,
+            "created_at": "2024-07-22T14:00:00Z",
+            "updated_at": "2024-07-22T14:00:00Z"
+        }
+    },
+    {
+        "model": "news.news",
+        "pk": 20,
+        "fields": {
+            "title": "New Scholarship Opportunities for STEM Students",
+            "content": "The university has announced new scholarship opportunities for students pursuing degrees in Science, Technology, Engineering, and Mathematics (STEM). These scholarships aim to support talented students who demonstrate academic excellence and financial need. The scholarships cover tuition fees and provide additional support for research projects and internships. The university is committed to promoting STEM education and ensuring that deserving students have the resources they need to succeed. Interested students are encouraged to apply through the university's scholarship office.",
+            "image": "news_images/img2.jpg",
+            "video": null,
+            "author": 1,
+            "category": 6,
+            "created_at": "2024-07-22T15:00:00Z",
+            "updated_at": "2024-07-22T15:00:00Z"
+        }
+    }
+]
+

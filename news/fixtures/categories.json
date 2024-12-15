@@ -1,0 +1,51 @@
+[
+    {
+        "model": "news.Category",
+        "pk": 1,
+        "fields": {
+            "name": "Academic"
+        }
+    },
+    {
+        "model": "news.Category",
+        "pk": 2,
+        "fields": {
+            "name": "Sports"
+        }
+    },
+    {
+        "model": "news.Category",
+        "pk": 3,
+        "fields": {
+            "name": "Entertainment"
+        }
+    },
+    {
+        "model": "news.Category",
+        "pk": 4,
+        "fields": {
+            "name": "Campus Activities"
+        }
+    },
+    {
+        "model": "news.Category",
+        "pk": 5,
+        "fields": {
+            "name": "University Administration"
+        }
+    },
+    {
+        "model": "news.Category",
+        "pk": 6,
+        "fields": {
+            "name": "Scholarships and Financial Aid"
+        }
+    },
+    {
+        "model": "news.Category",
+        "pk": 7,
+        "fields": {
+            "name": "Student Opinions and Editorials"
+        }
+    }
+]

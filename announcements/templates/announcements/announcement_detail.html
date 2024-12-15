@@ -4,8 +4,25 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>{{ announcement.title }}</h2>
-    <p>{{ announcement.content }}</p>
-    <p><strong>Published on:</strong> {{ announcement.published_date }}</p>
+    <div class="row">
+        <!-- Main content column -->
+        <div class="col-md-9 order-md-1 order-2">
+            <h2>{{ announcement.title }}</h2>
+            <p>{{ announcement.content }}</p>
+            <p><strong>Published on:</strong> {{ announcement.published_date }}</p>
+        </div>
+
+        <!-- Sidebar column -->
+        <div class="col-md-3 order-md-2 order-1">
+            <h4>Categories</h4>
+            <ul class="list-group">
+                {% for category in categories %}
+                    <li class="list-group-item">
+                        <a href="{% url 'news:category_news_list' category.id %}">{{ category.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}

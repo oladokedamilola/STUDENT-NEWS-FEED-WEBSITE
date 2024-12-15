@@ -1,0 +1,200 @@
+/* General body styles */
+body {
+    background-color: #FFFFFF; /* Default background color for all pages */
+    color: black; /* Default text color */
+    margin: 0; /* Remove default margin */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Apply gradient to home page only */
+.home-cover {
+    background: linear-gradient(135deg, #003366, #3399FF);
+    color: white; /* Text color on gradient background */
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar background spanning full width */
+.navbar-bg {
+    background-color: rgba(0, 51, 102, 0.8); /* Semi-transparent dark blue background */
+    width: 100%;
+    padding: 0.5rem 0; /* Padding for visual consistency */
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Navbar link text color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: grey; /* Gold color for active and hover states */
+}
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it looks nice */
+}
+/* Main heading styles */
+.cover-heading {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Subheading styles */
+.lead {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Button styles */
+.btn {
+    color: white; /* Button text color */
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 25px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: white; /* White background on hover */
+    color: #003366; /* Dark blue text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+/* Add this to your static/css/style.css */
+.rounded-circle {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40; /* Bootstrap dark color */
+    color: white;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #d4d4d4; /* Light gray color on hover */
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .list-inline-item + .list-inline-item::before {
+    content: " | ";
+    color: white;
+}
+
+.btn-block {
+        display: block;
+        width: 100%;
+    }
+    #btn-btn1 {
+        background-color: #007bff; /* Primary blue background */
+        color: white; /* White text */
+        border: none; /* Remove default border */
+        padding: 10px 20px; /* Add some padding */
+        font-size: 16px; /* Increase font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        border-radius: 5px; /* Rounded corners */
+        display: inline-block; /* Inline block display */
+        text-align: center; /* Center text */
+        text-decoration: none; /* Remove underline */
+    }
+    /* Ensure that the button is visible by default */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+.pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .pagination a, .pagination span {
+        margin: 0 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #333;
+    }
+    .pagination .current {
+        font-weight: bold;
+    }
+
+
+    #btn-btn1:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+        color: white; /* Ensure text remains white on hover */
+    }
+    @media (max-width: 767.98px) {
+        .col-md-3 {
+            order: 2;
+        }
+        .col-md-9 {
+            order: 1;
+        }
+    }
+    .form-group input {
+        width: 100%; /* Make the text field full width */
+    }
+    /* Add this to your CSS file or in a <style> block */
+textarea {
+    width: 100%;
+    resize: vertical; /* Allow vertical resizing only */
+    margin-bottom: 1rem; /* Space between textarea and button */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Space below form group elements */
+}
+.comment-box {
+    background-color: #f0f2f5; /* Light grey background */
+    border-radius: 8px;       /* Rounded corners */
+    padding: 10px;            /* Padding around the content */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.comment-box textarea {
+    width: 100%;               /* Full width */
+    border: 1px solid #ccc;   /* Light grey border */
+    border-radius: 4px;       /* Slightly rounded corners */
+    padding: 10px;            /* Padding inside the textarea */
+    box-sizing: border-box;   /* Include padding and border in element's total width and height */
+}
+
+.comment-box textarea:focus {
+    border-color: #007bff;    /* Blue border on focus */
+    outline: none;            /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow on focus */
+}
+.btn-dark1 {
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove border */
+    padding: 0.5rem 1rem; /* Add padding */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .btn-dark1:hover {
+    background-color: #23272b; /* Slightly lighter background on hover */
+    color: #ffffff; /* Ensure text color remains white */
+  }

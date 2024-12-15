@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -49,9 +49,16 @@ INSTALLED_APPS = [
     'students',
     'widget_tweaks',
     'special_users',
+    'crispy_forms',
+    'tinymce',
+    'crispy_bootstrap4',
+    'notifications',
 ]
 
-AUTH_USER_MODEL = 'auth.User'
+AUTH_USER_MODEL = 'students.CustomUser'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_URL = '/students/login/'
+
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -63,9 +70,6 @@ EMAIL_HOST_PASSWORD = 'your-email-password'
 DEFAULT_FROM_EMAIL = 'noreply@example.com'
 
 
-
-
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -75,6 +79,17 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Optionally, configure message tags
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.DEBUG: 'debug',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
+
 
 ROOT_URLCONF = 'lasu_news.urls'
 
@@ -95,8 +110,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'lasu_news.wsgi.application'
-
-
 
 
 # Database
@@ -149,11 +162,11 @@ MEDIA_URL = '/media/'
 
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
-MEDIA_ROOT = BASE_DIR / 'media'
+
+
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
-
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type

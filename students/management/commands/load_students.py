@@ -15,7 +15,6 @@ class Command(BaseCommand):
                     first_name=student['first_name'],
                     last_name=student['last_name'],
                     gender=student['gender'],
-                    faculty=student['faculty'],
                     department=student['department']
                 )
         self.stdout.write(self.style.SUCCESS('Successfully loaded student data'))

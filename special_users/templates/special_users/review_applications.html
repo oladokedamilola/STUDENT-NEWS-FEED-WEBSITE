@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Review Applications{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Review Content Creator Applications</h2>
+    <ul class="list-group">
+        {% for application in applications %}
+        <li class="list-group-item">
+            <p><strong>User:</strong> {{ application.user.username }}</p>
+            <p>{{ application.application_text }}</p>
+            <a href="{% url 'approve_application' application.id %}" class="btn btn-success">Approve</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

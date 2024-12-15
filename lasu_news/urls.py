@@ -27,10 +27,13 @@ urlpatterns = [
     path('announcements/', include('announcements.urls', namespace='announcements')),
     path('events/', include('events.urls', namespace='events')),
     path('search/', include('search.urls', namespace='search')),
-    path('students/', include('students.urls')),
+    path('students/', include('students.urls', namespace='student')),
     path('special_users/', include('special_users.urls')),  
+    path('notifications/', include('notifications.urls')),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

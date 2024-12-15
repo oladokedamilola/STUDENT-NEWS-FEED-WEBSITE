@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Edit Profile</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="{{ user_form.username.id_for_label }}">Username</label>
+                    <input type="text" name="username" id="{{ user_form.username.id_for_label }}" class="form-control" value="{{ user_form.username.value }}">
+                </div>
+                <div class="form-group">
+                    <label for="{{ user_form.email.id_for_label }}">Email</label>
+                    <input type="email" name="email" id="{{ user_form.email.id_for_label }}" class="form-control" value="{{ user_form.email.value }}">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="{{ student_form.profile_image.id_for_label }}">Profile Image</label>
+                    <input type="file" name="profile_image" id="{{ student_form.profile_image.id_for_label }}" class="form-control-file">
+                </div>
+                <div class="form-group">
+                    <label for="{{ student_form.phone_number.id_for_label }}">Phone Number</label>
+                    <input type="text" name="phone_number" id="{{ student_form.phone_number.id_for_label }}" class="form-control" value="{{ student_form.phone_number.value }}">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+    </form>
+</div>
+{% endblock %}

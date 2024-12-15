@@ -5,46 +5,43 @@
 Announcements
 {% endblock %}
 
-
-{% block nav %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">LASU News</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="{% url 'Home:home' %}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'News:news_list' %}">News</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'Event:event' %}">Events</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'Announcements:announcements' %}">Announcements</a></li>
-                {% if user.is_authenticated %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Student:profile' %}">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Student:logout' %}">Logout</a></li>
-                {% else %}
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Student:login' %}">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'Student:register' %}">Register</a></li>
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <!-- Main content column -->
+        <div class="col-md-9 order-md-1 order-2">
+            <h2>All Announcements</h2>
+            {% for announcement in announcements %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ announcement.title }}</h5>
+                <p class="card-text">{{ announcement.content }}</p>
+                {% if announcement.image %}
+                    <img src="{{ announcement.image.url }}" class="img-fluid" alt="Announcement Image">
                 {% endif %}
+                {% if announcement.video %}
+                    <video controls class="img-fluid">
+                        <source src="{{ announcement.video.url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                {% endif %}
+                <p class="card-text"><small class="text-muted">By {{ announcement.author.username }}</small></p>
+            </div>
+        </div>
+    {% endfor %}
+        </div>
+
+        <!-- Sidebar column -->
+        <div class="col-md-3 order-md-2 order-1">
+            <h4>Categories</h4>
+            <ul class="list-group">
+                {% for category in categories %}
+                    <li class="list-group-item">
+                        <a href="{% url 'news:category_news_list' category.id %}">{{ category.name }}</a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
-    </nav>
-    {% endblock %}
-
-
-
-    {% block content %}
-    <div class="container mt-5">
-        <h2>All Announcements</h2>
-        {% for announcement in announcements %}
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">{{ announcement.title }}</h5>
-                    <p class="card-text">{{ announcement.content|truncatewords:20 }}</p>
-                    <a href="{% url 'announcements:announcement_detail' announcement.pk %}" class="btn btn-primary">Read More</a>
-                </div>
-            </div>
-        {% endfor %}
     </div>
-    {% endblock %}
-
-</html>
+</div>
+{% endblock %}

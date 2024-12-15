@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Notifications{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Notifications</h2>
+    <div class="list-group">
+        {% for notification in notifications %}
+            <a href="{{ notification.post_url }}" class="list-group-item list-group-item-action {% if not notification.is_read %}list-group-item-primary{% endif %}">
+                <p>{{ notification.content }}</p>
+                <small>{{ notification.created_at|date:"F d, Y H:i" }}</small>
+            </a>
+        {% empty %}
+            <p>No notifications</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

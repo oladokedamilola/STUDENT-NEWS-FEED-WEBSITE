@@ -4,9 +4,33 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>{{ event.title }}</h2>
-    <p>{{ event.description }}</p>
-    <p><strong>Date:</strong> {{ event.date }}</p>
-    <p><strong>Location:</strong> {{ event.location }}</p>
+    <div class="row">
+        <!-- Main content column -->
+        <div class="col-md-9 order-md-1 order-2">
+            <h2>{{ event.title }}</h2>
+            {% if event.image %}
+                <img src="{{ event.image.url }}" class="img-fluid mb-3" alt="{{ event.title }}">
+            {% endif %}
+            <p>{{ event.content }}</p>
+            {% if event.video %}
+                <div class="embed-responsive embed-responsive-16by9 mb-3">
+                    <iframe class="embed-responsive-item" src="{{ event.video }}" allowfullscreen></iframe>
+                </div>
+            {% endif %}
+            <p><strong>Date:</strong> {{ event.created_at }}</p>
+        </div>
+
+        <!-- Sidebar column -->
+        <div class="col-md-3 order-md-2 order-1">
+            <h4>Categories</h4>
+            <ul class="list-group">
+                {% for category in categories %}
+                    <li class="list-group-item">
+                        <a href="{% url 'news:category_news_list' category.id %}">{{ category.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}
